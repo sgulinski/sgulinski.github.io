@@ -6,13 +6,23 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <p><strong>Sitemap</strong></p>
+        <ul class="sitemap-list">  
+          {% for page in site.pages %}
+            {% if page.title %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
+        <p><strong>Contact Me</strong></p>
+        <ul class="contact-me-list">
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+       
+        <p><strong>Follow Me</strong></p>
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -29,6 +39,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
+        <p><strong>Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></strong></p>
         <p>{{ site.description }}</p>
       </div>
     </div>
