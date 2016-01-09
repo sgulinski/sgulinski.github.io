@@ -1,1 +1,1 @@
-<!-- Place here your disclaimer for this website. -->
+Place here your disclaimer for this website.
