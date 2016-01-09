@@ -2,7 +2,7 @@
 layout: post
 title: "Hello world!"
 date: 2016-01-08 19:27:23 +0100
-categories: general
+categories: ['general']
 ---
 As you can read in <a href="{{ "/about-me/" | prepend: site.baseurl }}">About Me</a> section, I am a Software Engineer and Technical Leader based in Warsaw, Poland and since 2009 I work in a consulting business, serving clients from the Financial Services Industry. 
 
