@@ -13,8 +13,17 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 permalink: "/:title"
+
+# Uncomment the following two lines to remove disclaimer from your website
+# exclude: [disclaimer.md]
+# exclude_disclaimer_link_from_footer:	true
+
+# Social media settings
 twitter_username: sgulinski
 github_username:  sgulinski
+linkedin_public_link:	sgulinski
+stackoverflow_user:	3689153
+stackoverflow_display_name:	sebastian-gulinski
 
 # Build settings
 markdown: kramdown

@@ -6,7 +6,7 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <p><strong>Sitemap</strong></p>
+        <strong>Sitemap</strong>
         <ul class="sitemap-list">  
           {% for page in site.pages %}
             {% if page.title %}
@@ -17,30 +17,48 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        <p><strong>Contact Me</strong></p>
+        <strong>Contact Me</strong>
         <ul class="contact-me-list">
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
        
-        <p><strong>Follow Me</strong></p>
+        <strong>Follow Me</strong>
         <ul class="social-media-list">
-          {% if site.github_username %}
+          {% if site.twitter_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include profile-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
 
-          {% if site.twitter_username %}
+          {% if site.github_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include profile-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.linkedin_public_link %}
+          <li>
+            {% include profile-linkedin.html public_link=site.linkedin_public_link %}
+          </li>
+          {% endif %}
+
+          {% if site.stackoverflow_user and site.stackoverflow_display_name %}
+          <li>
+            {% include profile-stackoverflow.html user=site.stackoverflow_user display_name=site.stackoverflow_display_name %}
           </li>
           {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p><strong>Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></strong></p>
         <p>{{ site.description }}</p>
+        <p>Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><img class="icon icon--rss" alt="rss" src="{{ site.baseurl }}/assets/img/social-icons/icon-rss-16x16.png"></a></p>
+
+        {% if site.exclude_disclaimer_link_from_footer == nil or exclude_disclaimer_link_from_footer == false %}
+          <p>© Sebastian Gulinski | <a href="{{ "/disclaimer/" | prepend: site.baseurl }}">Disclaimer</a></p>
+        {% else %}
+          <p>© Sebastian Gulinski </p>
+        {% endif %}
       </div>
     </div>
 
