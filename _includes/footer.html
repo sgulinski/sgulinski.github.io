@@ -52,10 +52,10 @@
 
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
-        <p>Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><img class="icon icon--rss" alt="rss" src="{{ site.baseurl }}/assets/img/social-icons/icon-rss-16x16.png"></a></p>
+        <p>Subscribe via <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><img class="icon icon--rss" alt="rss" src="{{ "/assets/img/social-icons/icon-rss-16x16.png" | prepend: site.baseurl }}"></a></p>
 
         {% if site.exclude_disclaimer_link_from_footer != true %}
-          <p>© Sebastian Gulinski | <a href="{{ "/disclaimer/" | prepend: site.baseurl }}">Disclaimer</a></p>
+          <p>© Sebastian Gulinski | <a href="{{ "/disclaimer" | prepend: site.baseurl }}">Disclaimer</a></p>
         {% else %}
           <p>© Sebastian Gulinski </p>
         {% endif %}

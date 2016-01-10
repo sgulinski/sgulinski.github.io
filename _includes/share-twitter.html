@@ -1,0 +1,9 @@
+{% if site.twitter_username %}
+	<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | prepend: site.baseurl | prepend: site.url }}&via={{ site.twitter_username }}" target="_blank" >
+		<img class="icon icon--twitter" alt="Twitter" src="{{ "/assets/img/social-icons/icon-twitter-32x32.png" | prepend: site.baseurl }}">
+	</a>
+{% else %}
+	<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | prepend: site.baseurl | prepend: site.url }}" target="_blank" >
+		<img class="icon icon--twitter" alt="Twitter" src="{{ "/assets/img/social-icons/icon-twitter-32x32.png" | prepend: site.baseurl }}">
+	</a>
+{% endif %}
